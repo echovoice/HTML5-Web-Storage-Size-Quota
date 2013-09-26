@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>localStorage Check</title>
+</head>
+<body>
+
+<h1>Web Storage Check</h1>
+<p>Teddy Garland</p>
+<p><a href="//echovoice.com" target="_blank">Echovoice</a></p>
+<p>9/24/2013</p>
+<p>v1.0</p>
+
+<p>&nbsp;</p>
+<p>Values are given in Bytes. A return value of -1 signifies that the Web Storage type is not supported, 20000015 implies unlimited.</p>
+
+<p>&nbsp;</p>
+<div id="results"></div>
+
+<script type="text/javascript" src="checkWebStorageSizeQuota.js"></script>
+<script type="text/javascript">
+
+//run the test with constructor, which will check localStorage, sessionStorage but not globalStorage
+var storageResults = new checkWebStorageSizeQuota(["localStorage", "sessionStorage"]);
+
+//pretty print the results to the DOM
+document.getElementById('results').innerHTML = storageResults.prettyPrint();
+
+</script>
+
+</body>
+</html>
